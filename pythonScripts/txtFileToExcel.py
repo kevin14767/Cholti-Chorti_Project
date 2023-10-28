@@ -10,28 +10,33 @@
 
 import pandas as pd
 
-input = 'liturgy30June06.txt'
+input = 'liturgy30June06edited.txt'
 output = 'copyy.xlsx'
 
 df = pd.DataFrame(columns=['Pregunta/Respuesta','Line Number', 'Manuscript Page','Entry in Page','Standardized Cholti','Morphemic Gloss',
                            'Literal English Translation','Flowing English Translation'])
 
 switch = 'P';
+newEntry = False;
 
 with open(input, 'r') as file:
-    for line in file:
-        line = line.strip()
-        line_number = None
-        if line.isdigit():
-            line_number = int(line)
-        data_to_append = {'Line Number': line_number,'Pregunta/Respuesta':switch}
-        df = df._append(data_to_append,ignore_index=True)
+    lines = file.readlines()
+    chunk_size = 5
+    data_to_append = {}
+    for i in range(0, len(lines), chunk_size):
+        chunk = [line.strip() for line in lines[i:i + chunk_size]]
+        print(chunk[0])
+        data_to_append = {'Pregunta/Respuesta': switch, 'Line Number': chunk[0],'Standardized Cholti': chunk[1], 'Morphemic Gloss':chunk[2]
+                          ,'Literal English Translation': chunk[3], 'Flowing English Translation':chunk[4] }
         if (switch == 'P'):
-            switch = 'F'
+            switch = 'R'
         else:
             switch = 'P'
+        #df = df._append(data_to_append, ignore_index= True)
+    
         
+#df.to_excel(output, index=False)
 
 
-df.to_excel(output, index=False)
+        
         
