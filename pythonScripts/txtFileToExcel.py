@@ -32,10 +32,10 @@ with open(input, 'r') as file:
             switch = 'R'
         else:
             switch = 'P'
-        #df = df._append(data_to_append, ignore_index= True)
+        df = df._append(data_to_append, ignore_index= True)
     
         
-#df.to_excel(output, index=False)
+df.to_excel(output, index=False)
 
 
         
