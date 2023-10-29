@@ -10,12 +10,12 @@
 
 import pandas as pd
 
-input = 'liturgy30June06.txt'
+input = 'Original Transcription.txt'
 
 with open(input, 'r') as file:
     lines = file.readlines()
 
-with open('output.txt', 'w') as file:
+with open('OriginalTranscriptEdited.txt', 'w') as file:
     for line in lines:
         if line.strip():
             file.write(line)
