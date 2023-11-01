@@ -7,6 +7,8 @@
 #Line entry in the actual manuscript page. i.e entry number 1 entry number 2 however sometimes they are in the same line entry or in
 #multiple lines for one entry. 
 #4 columns: standardized version of the original ch'olti, morphemic gloss, a literal english translation, a flowing english translation
+
+#after all I ended up not using this python script to create FirstVersion.xlsx
 from docx import Document
 from openpyxl import load_workbook
 
