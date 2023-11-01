@@ -8,6 +8,8 @@
 #multiple lines for one entry. 
 #4 columns: standardized version of the original ch'olti, morphemic gloss, a literal english translation, a flowing english translation
 
+#old version disregard, although this beta is later used in txtFiletoExcel.py
+
 import pandas as pd
 
 input = 'liturgy30June06.txt'
