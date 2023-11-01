@@ -1,5 +1,8 @@
 #feed lines from the original transcription to the v1 of excel sheet
 #tasks are to add the entries of the page and reset at each page, add this transcription of it as well in a new column that's all so far.
+
+#script edited versionOne of the excel sheet to add page entries, although ran into complications with the text file so i manually entered page entries in SecondVersion.xlsx 
+
 import openpyxl
 
 workbook = openpyxl.load_workbook("FirstVersion.xlsx")
