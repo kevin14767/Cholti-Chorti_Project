@@ -1,3 +1,8 @@
+#this python script was used to create cholti_append.xlsx the inteded use of this script was to take cholti words from the cholti_wordlist excel sheet
+#and scholarly transcribe it. as seen in the fourth column of the cholti_append sheet
+#so Work in Progress script
+
+
 from openpyxl import load_workbook
 #workbook we are working with 
 workbook = load_workbook(filename= "Cholti_WordList.xlsx")
