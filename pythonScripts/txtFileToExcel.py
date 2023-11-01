@@ -8,6 +8,8 @@
 #multiple lines for one entry. 
 #4 columns: standardized version of the original ch'olti, morphemic gloss, a literal english translation, a flowing english translation
 
+#script used to write the FirstVersion.xlxs sheet has some bugs but I sorted those out in the final product. 
+
 import pandas as pd
 
 input = 'liturgy30June06edited.txt'
@@ -15,6 +17,7 @@ output = 'copyy.xlsx'
 
 df = pd.DataFrame(columns=['Pregunta/Respuesta','Line Number', 'Manuscript Page','Entry in Page','Standardized Cholti','Morphemic Gloss',
                            'Literal English Translation','Flowing English Translation'])
+
 
 switch = 'P';
 newEntry = False;
